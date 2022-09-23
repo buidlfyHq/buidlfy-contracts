@@ -1,0 +1,46 @@
+type ActiveTemplate @entity {
+  id: ID!
+  acceptedTimestamp: String
+  isActive: Boolean
+  token: ERC1155Token
+}
+
+type Listing @entity {
+  id: ID!
+  token: ERC1155Token
+  lister: Bytes! # address
+  listing_listingId: BigInt! # uint256
+  listing_tokenOwner: Bytes! # address
+  listing_assetContract: Bytes! # address
+  listing_tokenId: BigInt! # uint256
+  listing_startTime: BigInt! # uint256
+  listing_endTime: BigInt! # uint256
+  listing_quantity: BigInt! # uint256
+  listing_currency: Bytes! # address
+  listing_reservePricePerToken: BigInt! # uint256
+  listing_buyoutPricePerToken: BigInt! # uint256
+  listing_tokenType: Int! # uint8
+  listing_listingType: Int! # uint8
+  isAccepted: Boolean # bool
+}
+
+type NewSale @entity {
+  id: ID!
+  listingId: BigInt! # uint256
+  assetContract: Bytes! # address
+  lister: Bytes! # address
+  buyer: Bytes! # address
+  quantityBought: BigInt! # uint256
+  totalPricePaid: BigInt! # uint256
+}
+
+type ERC1155Token @entity {
+	id: ID!
+	contract: Bytes!
+	identifier: BigInt!
+	uri: String
+}
+
+type ERC1155Contract @entity(immutable: true) {
+	id: Bytes!
+}

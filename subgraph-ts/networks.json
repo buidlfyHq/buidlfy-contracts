@@ -1,0 +1,13 @@
+{
+  "goerli": {
+    "TemplateRegistry": {
+      "address": "0x5741Aee1493864C73E67249bc4E23cAf67D4F48f"
+    },
+    "Contract": {
+      "address": "0x3b60689246D50eAeBA251cd6e12A3D0FfE206A00"
+    },
+    "TemplateERC1155": {
+      "address": "0xa69374D7371DF89192F05C7b61a945f834bF2593"
+    }
+  }
+}

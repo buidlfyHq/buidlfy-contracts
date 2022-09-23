@@ -1,0 +1,13 @@
+{
+    "output": "generated/erc1155.",
+    "chain": "goerli",
+    "datasources": [
+        {
+            "address": "0xa69374D7371DF89192F05C7b61a945f834bF2593",
+            "startBlock": 7603116,
+            "module": [
+                "erc1155"
+            ]
+        }
+    ]
+}
